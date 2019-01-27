@@ -1,0 +1,62 @@
+﻿<html>
+<head>
+<meta http-equiv="refresh" content="60;url=file:///E:/docs/html/india/ques4.htm" />
+<title>
+my quiz
+</title>
+</head>
+<body style= "font-size:25;color:white;font-family:Lucida calligraphy;background-position:center;background-size:150% 200%;" background="back2.jpg" vlink=black >
+<div id="timer">1:00</div>
+<script type="text/javascript">
+var timeoutHandle;
+function countdown(minutes) {
+    var seconds = 60;
+    var mins = minutes
+    function tick() {
+        var counter = document.getElementById("timer");
+        var current_minutes = mins-1
+        seconds--;
+        counter.innerHTML =
+        current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
+        if( seconds > 0 ) {
+            timeoutHandle=setTimeout(tick, 1000);
+        } else {
+
+            if(mins > 1){
+
+               // countdown(mins-1);   never reach “00″ issue solved:Contributed by Victor Streithorst
+               setTimeout(function () { countdown(mins - 1); }, 1000);
+
+            }
+        }
+    }
+    tick();
+}
+
+countdown(1);
+
+</script>
+<p style="font-size:50;color:red;" align="center">QUESTION 3</p>
+<hr size="2" color=gold>
+<p align="center" style="font-size:40;color:green;font-family:lucida handwriting;">
+3. Which is the first talkie film in India?</p>
+<a href="wrong3.html" style="color:brown;font-size:28;"><center>a) Jalsaghar</center></a><br>
+<a href="wrong3.html" style="color:brown;font-size:28;"><center>b) Charulata</center></a><br>
+<a href="correct3.html" style="color:brown;font-size:28;"><center>c) Alam Ara</center></a><br>
+<a href="wrong3.html"style="color:brown;font-size:28;" ><center>d) Mayabazar</center></a>
+<hr size="2" color=gold>
+<a href="ques2.html" style="font-family:cooperman;color:blue;"><center>PREVIOUS QUESTION</center></a>
+<a href="ques4.htm" style="font-family:cooperman;color:blue;"><center>NEXT QUESTION</center></a>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

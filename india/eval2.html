@@ -1,0 +1,25 @@
+<HTML>
+<HEAD>
+<TITLE>
+EVALUATAION
+</TITLE>
+</HEAD>
+<BODY>
+<form name="form">
+<input type="text" id="1" name="fname"/><B>NAME</B><br><br><br>
+<iframe src="iframe.html" width="300" height="200"></iframe><B>MESSAGE</B><br><br><br>
+
+<input type="button" onclick="func1()" value="click"/>
+<a href="resume2.html" target=frame2><input type="button" value="profile"/></a>
+</form>
+<script>
+function func1(){
+var nameForm=document.form;
+
+var name=prompt("enter name");
+
+nameForm.fname.value=name;
+}
+</script>
+</body>
+</html>

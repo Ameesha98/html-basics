@@ -1,0 +1,55 @@
+﻿<html>
+<head>
+<meta http-equiv="refresh" content="60;url=file:///E:/docs/html/india/ques2.html" />
+<title>
+my quiz
+</title>
+</head>
+<body style= "font-size:30;color:white;font-family:Lucida calligraphy;background-position:center;background-size:200% 200%;" background="back2.jpg" vlink=black >
+<div id="timer">1:00</div>
+<script type="text/javascript">
+var timeoutHandle;
+function countdown(minutes) {
+    var seconds = 60;
+    var mins = minutes
+    function tick() {
+        var counter = document.getElementById("timer");
+        var current_minutes = mins-1
+        seconds--;
+        counter.innerHTML =
+        current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
+        if( seconds > 0 ) {
+            timeoutHandle=setTimeout(tick, 1000);
+        } else {
+
+            if(mins > 1){
+
+               // countdown(mins-1);   never reach “00″ issue solved:Contributed by Victor Streithorst
+               setTimeout(function () { countdown(mins - 1); }, 1000);
+
+            }
+        }
+    }
+    tick();
+}
+
+countdown(1);
+
+</script>
+<p style="font-size:50;color:red;" align="center">QUESTION 1</p>
+<hr size="2" color=gold>
+<p align="center" style="font-size:40;color:green;font-family:lucida handwriting;">
+1. Which is the first narrative feature film in India?</p>
+<a href="correct1.html" style="color:brown;font-size:28;"><center>a) Pundalik</center></a><br>
+<a href="wrong1.html" style="color:brown;font-size:28;"><center>b) Raja Harishchandra</center></a><br>
+<a href="wrong1.html" style="color:brown;font-size:28;"><center>c) Alam Ara</center></a><br>
+<a href="wrong1.html"style="color:brown;font-size:28;" ><center>d) Sant Tukaram</center></a>
+<hr size="2" color=gold>
+<a href="ques2.html" style="font-family:cooperman;color:blue;"><center>NEXT QUESTION</center></a>
+</body>
+</html>
+
+
+
+
+
